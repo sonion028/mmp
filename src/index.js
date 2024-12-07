@@ -141,7 +141,7 @@ program.command('add').description('自定义镜像').action(() => {
             fs.writeFileSync(path.join(__dirname, '../registries.json'), JSON.stringify(registries, null, 4))
             console.log(chalk.blue('添加完成'))
         }
-        catch (e) {
+        catch (err) {
             console.log(chalk.red(err))
         }
 
